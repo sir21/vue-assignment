@@ -1,13 +1,10 @@
 <template>
-  <div class="home">
-    <h1>Products</h1>
+  <div class="laptops">
+    <h1>Laptops</h1>
     <ul>
       <li v-for="product in products" :key="product.id">
-        Product Name: {{product.name}} <br/>
-        Brand: {{product.brand}} <br />
-        Price: Rs. {{product.price}} <br />
-        <div v-if="product.type === 'laptop'"><img src="../assets/images/laptop.jpg" width="200px" height="200px" /></div>
-        <div v-if="product.type === 'phone'"><img src="../assets/images/phone.jpg" width="200px" height="200px" /></div>
+        {{product.name}}
+        {{product.price}}
         <br />
         <button @click="addToCart(product)">Add item to Cart</button>
       </li>
@@ -20,7 +17,7 @@ import { mapState } from "vuex";
 
 export default {
   computed: mapState({
-    products: state => state.all
+    products: state => state.laptops
   }),
   methods: {
     addToCart(product) {
@@ -28,7 +25,7 @@ export default {
     }
   },
   created() {
-    this.$store.dispatch("getAllProducts");
+    this.$store.dispatch("getLaptops");
   }
 };
 </script>
@@ -42,7 +39,6 @@ ul {
 li {
     background-color: grey;
     padding: 12px 20px 12px 20px;
-    margin-bottom: 10px;
 }
 </style>
 
