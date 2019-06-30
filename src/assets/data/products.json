@@ -1,0 +1,22 @@
+{
+    "products": {
+        "laptops": [
+            {
+                "brand": "HP",
+                "name": "HP 2000",
+                "year": 2010,
+                "price": 85000,
+                "RAM": "4GB"
+            }   
+        ],
+        "smartphones": [
+            {
+                "brand": "SAMSUNG",
+                "name": "A70",
+                "year": 2019,
+                "price": 65000,
+                "RAM": "4GB"
+            } 
+        ]
+    }
+}
