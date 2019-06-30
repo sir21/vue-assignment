@@ -1,18 +1,20 @@
 <template>
-  <header>
-    <nav>
-      <ul>
-        <li class="li-left">Home</li>
-        <li class="li-right">Shopping Cart</li>
-      </ul>
-    </nav>
-  </header>
+  <div>
+    <header>
+      <nav>
+        <ul>
+          <li class="li-left"><router-link to="/">Home</router-link></li>
+          <li class="li-left"><router-link to="/laptops">Laptops</router-link></li>
+          <li class="li-left"><router-link to="/phones">Phones</router-link></li>
+          <li class="li-right"><router-link to="/shopping">Shopping Cart</router-link></li>
+        </ul>
+      </nav>
+    </header>
+  </div>
 </template>
 
 <script>
-export default {
-    
-}
+export default {};
 </script>
 
 <style scoped>
@@ -24,13 +26,17 @@ ul {
   background-color: #fff;
 }
 
+li {
+  font-size: 25px;
+}
+
 .li-left {
-    float: left;
-    padding-left: 15px;
+  float: left;
+  padding-left: 15px;
 }
 .li-right {
-    float: right;
-    padding-right: 15px;
+  float: right;
+  padding-right: 15px;
 }
 </style>
 

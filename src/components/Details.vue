@@ -1,19 +1,25 @@
 <template>
   <div>
-    <h1>{{title}}</h1>
-    <img :src="laptopImg" />
+    <h3>{{product.name}}</h3>
+    <div v-if="product.type === 'laptop'"><img src="../assets/images/laptop.jpg" /></div>
+    <div v-if="product.type === 'phone'"><img src="../assets/images/phone.jpg" /></div>
+    Brand: {{product.brand}}
+    Year: {{product.year}}
+    Price: Rs. {{product.price}}
   </div>
 </template>
 
 <script>
-import laptopImg from "../assets/images/laptop.jpg";
+import { mapGetters } from "vuex";
 
-export default {
-  data: function() {
-    return {
-      laptopImg: laptopImg,
-      title: 'Details'
-    };
+export default {   
+  computed: mapGetters({
+    product: 'getProduct'
+  }),
+  methods: {
+    addToCart(product) {
+      this.$store.dispatch("addToCart", product, {root: true})
+    }
   }
 };
 </script>

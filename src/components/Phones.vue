@@ -1,10 +1,20 @@
 <template>
   <div class="phones">
-    <h1>Phones</h1>
+    <h3>Phones</h3>
     <ul>
       <li v-for="product in products" :key="product.id">
-        {{product.name}}
-        {{product.price}}
+        Product Name: {{product.name}}
+        <br />
+        Brand: {{product.brand}}
+        <br />
+        Price: Rs. {{product.price}}
+        <span @click="selectProduct(product)">
+          <router-link :to="`/details/${product.id}`">Preview</router-link>
+        </span>
+        <br />
+        <div>
+          <img src="../assets/images/phone.jpg" width="200px" height="200px" />
+        </div>
         <br />
         <button @click="addToCart(product)">Add item to Cart</button>
       </li>
@@ -21,7 +31,10 @@ export default {
   }),
   methods: {
     addToCart(product) {
-      this.$store.dispatch("addToCart", product, {root: true})
+      this.$store.dispatch("addToCart", product, { root: true });
+    },
+    selectProduct(product) {
+      this.$store.dispatch("selectProduct", product, { root: true });
     }
   },
   created() {
@@ -32,13 +45,13 @@ export default {
 
 <style scoped>
 ul {
-    list-style-type: none;
-    background-color: beige;
-    padding: 10px 0 10px 0;
+  list-style-type: none;
+  background-color: beige;
+  padding: 10px 0 10px 0;
 }
 li {
-    background-color: grey;
-    padding: 12px 20px 12px 20px;
+  background-color: grey;
+  padding: 12px 20px 12px 20px;
 }
 </style>
 
