@@ -21,19 +21,19 @@
           </tr>
           <tr>
             <td class="summary" colspan="3">Sub Total</td>
-            <td class="price">{{cartDetails.subTotal}}</td>
+            <td class="price">{{cartDetails.subTotal}}.00</td>
           </tr>
           <tr>
             <td class="summary" colspan="3">VAT</td>
-            <td class="price">{{cartDetails.tax}}</td>
+            <td class="price">{{cartDetails.tax}}.00</td>
           </tr>
           <tr>
             <td class="summary" colspan="3">Discount</td>
-            <td class="price">{{cartDetails.discount}}</td>
+            <td class="price">{{cartDetails.discount}}.00</td>
           </tr>
           <tr>
             <td class="summary" colspan="3">Total</td>
-            <td class="price">{{cartDetails.total}}</td>
+            <td class="price">{{cartDetails.total}}.00</td>
           </tr>
         </tbody>
       </table>
