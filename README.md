@@ -1,5 +1,11 @@
 # assignment
 
+## Overview
+Simple vue.js application with the features of
+- Shopping cart
+- Calculate total with discounts and taxes
+- Preview items
+
 ## Project setup
 ```
 npm install
