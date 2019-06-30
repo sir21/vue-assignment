@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <h1>Global Electronics</h1>
     <Navigation>
     </Navigation>
     <div>
